@@ -22,6 +22,6 @@ public class SubstractFourFromFive {
 
 	  @Then("We get 1")
 	  public void then() throws Throwable {
-		  assertEquals(2, result); // FAIL on purpose.
+		  assertEquals(1, result); // FAIL on purpose.
 	  }
 }
