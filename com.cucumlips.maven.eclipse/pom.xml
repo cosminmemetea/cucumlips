@@ -20,29 +20,10 @@
 
   <dependencies>
     <dependency>
-      <groupId>junit</groupId>
-      <artifactId>junit</artifactId>
-      <version>4.11</version>
-      <scope>test</scope>
-    </dependency>       
-    <dependency>
-      <groupId>org.junit.jupiter</groupId>
-      <artifactId>junit-jupiter-api</artifactId>
-      <version>5.7.0</version>
-      <scope>test</scope>
-    </dependency>
-    <dependency>
-      <groupId>org.junit.jupiter</groupId>
-      <artifactId>junit-jupiter-engine</artifactId>
-      <version>5.7.0</version>
-      <scope>test</scope>
-    </dependency>
-    <dependency>
     	<groupId>com.google.code.gson</groupId>
     	<artifactId>gson</artifactId>
     	<version>2.8.6</version>
     </dependency>
-    
     <!-- https://mvnrepository.com/artifact/org.apiguardian/apiguardian-api -->
 	<dependency>
 	    <groupId>org.apiguardian</groupId>
@@ -55,7 +36,6 @@
 	    <artifactId>cucumber-java</artifactId>
 	    <version>6.1.1</version>
 	</dependency>
-	
 	<!-- https://mvnrepository.com/artifact/io.cucumber/cucumber-core -->
 	<dependency>
 	    <groupId>io.cucumber</groupId>
@@ -84,6 +64,13 @@
 	    <groupId>io.cucumber</groupId>
 	    <artifactId>cucumber-java8</artifactId>
 	    <version>6.1.1</version>
+	</dependency>
+	<!-- https://mvnrepository.com/artifact/io.cucumber/cucumber-junit -->
+	<dependency>
+	    <groupId>io.cucumber</groupId>
+	    <artifactId>cucumber-junit</artifactId>
+	    <version>6.1.1</version>
+	    <scope>test</scope>
 	</dependency>
 	<!-- https://mvnrepository.com/artifact/io.cucumber/cucumber-plugin -->
 	<dependency>
@@ -180,6 +167,47 @@
 	       <artifactId>maven-failsafe-plugin</artifactId>
 	       <version>2.22.2</version>
 	     </plugin>
+	    <plugin>
+            <groupId>net.masterthought</groupId>
+            <artifactId>maven-cucumber-reporting</artifactId>
+		    <version>5.4.0</version>
+		    <executions>
+	    		<execution>
+		            <id>execution</id>
+		            <phase>test</phase>
+		            <goals>
+		                <goal>generate</goal>
+		            </goals>
+		            <configuration>
+		            	<projectName>ExecuteAutomation</projectName>
+		            	<!-- optional, per documentation set this to "true" to bypass generation of Cucumber Reports entirely, defaults to false if not specified -->
+                        <skip>false</skip>
+                        <!-- output directory for the generated report -->
+                        <outputDirectory>${project.build.directory}</outputDirectory>
+                        <!-- optional, defaults to outputDirectory if not specified -->
+                        <inputDirectory>${project.build.directory}/jsonReports</inputDirectory>
+                        <jsonFiles>
+                            <!-- supports wildcard or name pattern -->
+                            <param>**/*.json</param>
+                        </jsonFiles>
+                        <!-- optional, defaults to outputDirectory if not specified -->
+                        <classificationDirectory>${project.build.directory}/classifications</classificationDirectory>
+                        <classificationFiles>
+                                <!-- supports wildcard or name pattern -->
+                                <param>sample.properties</param>
+                                <param>other.properties</param>
+                        </classificationFiles>
+                        <!-- optional, set true to group features by its Ids -->
+                        <mergeFeaturesById>false</mergeFeaturesById>
+                        <!-- optional, set true to get a final report with latest results of the same test from different test runs -->
+                        <mergeFeaturesWithRetest>false</mergeFeaturesWithRetest>
+                        <!-- optional, set true to fail build on test failures -->
+                        <checkBuildResult>false</checkBuildResult>
+		            </configuration>
+        		</execution>
+	    	</executions>
+		</plugin>  
+
       </plugins>
     </pluginManagement>
   </build>

@@ -1,4 +1,4 @@
-package com.cucumlips.maven.eclipse.features.add;
+package com.cucumlips.maven.eclipse.steps.add;
 
 import static org.junit.Assert.assertEquals;
 
@@ -30,7 +30,5 @@ public class AddTwoPositiveNumbers {
   public void then() throws Throwable {
 	  assertEquals(12, resultTerm);
   }
-
- 
 
 }
