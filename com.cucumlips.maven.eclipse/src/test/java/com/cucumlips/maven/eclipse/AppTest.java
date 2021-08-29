@@ -11,7 +11,7 @@ import io.cucumber.junit.CucumberOptions;
 @RunWith(Cucumber.class)
 @CucumberOptions(
 		features = "src/test/resources/features",
-		plugin = { "pretty", "html:target/cucumber-reports" },
+		plugin = { "pretty", "html:target/cucumber-reports.html" },
 		glue = { "com/cucumlips/maven/eclipse/steps" },
 		monochrome = true)
 public class AppTest 
