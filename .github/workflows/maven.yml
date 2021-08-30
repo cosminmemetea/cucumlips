@@ -24,7 +24,10 @@ jobs:
         cache: maven
     - name: Build with Maven
       run: mvn -B package --file com.cucumlips.maven.eclipse/pom.xml
-      
+    - uses: deblockt/cucumber-report-annotations-action@v1.7
+      with:
+        access-token: ${{ secrets.GITHUB_TOKEN }}
+        path: "com.cucumlips.maven.eclipse/target/cucumber-reports.html"  
     - name: Deploy report pages to Github Pages
       uses: peaceiris/actions-gh-pages@v3
       with: 
