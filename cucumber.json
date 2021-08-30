@@ -3,7 +3,7 @@
     "line": 20,
     "elements": [
       {
-        "start_timestamp": "2021-08-30T14:34:03.823Z",
+        "start_timestamp": "2021-08-30T14:34:46.467Z",
         "line": 23,
         "name": "Add two positive numbers",
         "description": "",
@@ -13,7 +13,7 @@
         "steps": [
           {
             "result": {
-              "duration": 1999800,
+              "duration": 2004800,
               "status": "passed"
             },
             "line": 24,
@@ -47,7 +47,7 @@
           },
           {
             "result": {
-              "duration": 999200,
+              "duration": 2001600,
               "status": "passed"
             },
             "line": 27,
@@ -88,7 +88,7 @@
     "line": 20,
     "elements": [
       {
-        "start_timestamp": "2021-08-30T14:34:04.086Z",
+        "start_timestamp": "2021-08-30T14:34:46.617Z",
         "line": 23,
         "name": "Substracting 4 from 5",
         "description": "",
