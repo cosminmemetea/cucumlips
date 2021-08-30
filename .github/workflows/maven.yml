@@ -27,7 +27,7 @@ jobs:
     - uses: deblockt/cucumber-report-annotations-action@v1.7
       with:
         access-token: ${{ secrets.GITHUB_TOKEN }}
-        path: "com.cucumlips.maven.eclipse/target/cucumber-reports.html"  
+        path: "com.cucumlips.maven.eclipse/target/cucumber.json"  
     - name: Deploy report pages to Github Pages
       uses: peaceiris/actions-gh-pages@v3
       with: 
