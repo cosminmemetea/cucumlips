@@ -1,0 +1,159 @@
+[
+  {
+    "line": 20,
+    "elements": [
+      {
+        "start_timestamp": "2021-08-30T14:34:03.823Z",
+        "line": 23,
+        "name": "Add two positive numbers",
+        "description": "",
+        "id": "add;add-two-positive-numbers",
+        "type": "scenario",
+        "keyword": "Scenario",
+        "steps": [
+          {
+            "result": {
+              "duration": 1999800,
+              "status": "passed"
+            },
+            "line": 24,
+            "name": "I am selecting 10 as first term",
+            "match": {
+              "location": "com.cucumlips.maven.eclipse.steps.add.AddTwoPositiveNumbers.given()"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "status": "passed"
+            },
+            "line": 25,
+            "name": "I am selecting 2 as the second term",
+            "match": {
+              "location": "com.cucumlips.maven.eclipse.steps.add.AddTwoPositiveNumbers.and()"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "status": "passed"
+            },
+            "line": 26,
+            "name": "I am asking for the result",
+            "match": {
+              "location": "com.cucumlips.maven.eclipse.steps.add.AddTwoPositiveNumbers.when()"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 999200,
+              "status": "passed"
+            },
+            "line": 27,
+            "name": "I want to get 12 as a result",
+            "match": {
+              "location": "com.cucumlips.maven.eclipse.steps.add.AddTwoPositiveNumbers.then()"
+            },
+            "keyword": "Then "
+          }
+        ],
+        "tags": [
+          {
+            "name": "@Add"
+          },
+          {
+            "name": "@AddTwoPositiveNumbers"
+          }
+        ]
+      }
+    ],
+    "name": "Add",
+    "description": "",
+    "id": "add",
+    "keyword": "Feature",
+    "uri": "file:src/test/resources/features/Add.feature",
+    "tags": [
+      {
+        "name": "@Add",
+        "type": "Tag",
+        "location": {
+          "line": 19,
+          "column": 1
+        }
+      }
+    ]
+  },
+  {
+    "line": 20,
+    "elements": [
+      {
+        "start_timestamp": "2021-08-30T14:34:04.086Z",
+        "line": 23,
+        "name": "Substracting 4 from 5",
+        "description": "",
+        "id": "add;substracting-4-from-5",
+        "type": "scenario",
+        "keyword": "Scenario",
+        "steps": [
+          {
+            "result": {
+              "status": "passed"
+            },
+            "line": 24,
+            "name": "5",
+            "match": {
+              "location": "com.cucumlips.maven.eclipse.steps.substract.SubstractFourFromFive.given()"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "status": "passed"
+            },
+            "line": 25,
+            "name": "Substracting 4",
+            "match": {
+              "location": "com.cucumlips.maven.eclipse.steps.substract.SubstractFourFromFive.when()"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "status": "passed"
+            },
+            "line": 26,
+            "name": "We get 1",
+            "match": {
+              "location": "com.cucumlips.maven.eclipse.steps.substract.SubstractFourFromFive.then()"
+            },
+            "keyword": "Then "
+          }
+        ],
+        "tags": [
+          {
+            "name": "@Substract"
+          },
+          {
+            "name": "@SubstractingUseCaseOne"
+          }
+        ]
+      }
+    ],
+    "name": "Add",
+    "description": "",
+    "id": "add",
+    "keyword": "Feature",
+    "uri": "file:src/test/resources/features/Substract.feature",
+    "tags": [
+      {
+        "name": "@Substract",
+        "type": "Tag",
+        "location": {
+          "line": 19,
+          "column": 1
+        }
+      }
+    ]
+  }
+]
